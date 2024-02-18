@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 blog-content">
-            <img src="{{asset('adminassets/images/car_2.jpg')}}" alt="" class="img-fluid p-3 mb-5 bg-white rounded">
+            <img src="{{ asset('adminassets/images/'.$car->image) }}" alt="" class="img-fluid p-3 mb-5 bg-white rounded">
             
             <div class="grey-bg container-fluid">
               <section id="minimal-statistics">

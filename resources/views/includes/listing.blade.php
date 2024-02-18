@@ -16,7 +16,7 @@
                             <img src="{{ asset('adminassets/images/'.$car->image) }}" alt="Image" class="img-fluid">
                         </div>
                         <div class="listing-contents h-100">
-                            <h3>{{ $car->title }}</h3>
+                            <h3><a href="{{ route('single.car', ['id' => $car->id]) }}">{{ $car->title }}</h3>
                             <div class="rent-price">
                                 <strong>${{ $car->price }}</strong><span class="mx-1">/</span>day
                             </div>
@@ -36,7 +36,7 @@
                             </div>
                             <div>
                                 <p>{{ $car->content }}</p>
-                                <p><a href="#" class="btn btn-primary btn-sm">Rent Now</a></p>
+                                <p><a href="{{ route('single.car', ['id' => $car->id]) }}" class="btn btn-primary btn-sm">Rent Now</a></p>
                             </div>
                         </div>
                     </div>
