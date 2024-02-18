@@ -51,7 +51,7 @@
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="cat_name">Edit Category <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input type="text" id="cat_name" name="cat_name" required="required" class="form-control ">
+												<input type="text" id="cat_name" name="cat_name" value="{{$categories->cat_name}}" required="required" class="form-control ">
 											</div>
 										</div>
 										
