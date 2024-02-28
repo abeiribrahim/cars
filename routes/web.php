@@ -35,6 +35,7 @@ Route::get('single/car/{id}', [CarController::class,'show'])->name('single.car')
 Route::get('single/categories', [CategoryController::class,'showCategories'])->name('single.categories');
 Route::get('about',[PublicController::class,'about'])->name('about');
     Route::get('blog',[CarController::class,'blog'])->name('blog');
+    Route::post('search',[CarController::class,'search'])->name('search');
   
 
 

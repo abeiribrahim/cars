@@ -17,12 +17,13 @@ class PublicController extends Controller
     use Common;
     public function index()
     {
-      
+        $carTypes = Car::pluck('title', 'id'); // Assuming 'title' is the field representing car types
+        
         $messages=Message::get();
         $cars= car::take(6)->get();
         $categories = Category::get();
         $testimonials = Testimonial::take(3)->get();
-        return view('index',compact('testimonials','messages','cars','categories'));
+        return view('index',compact('testimonials','messages','cars','categories','carTypes'));
     }
     public function sendEmails(Request $request)
     {

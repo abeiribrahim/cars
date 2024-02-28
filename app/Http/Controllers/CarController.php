@@ -110,7 +110,18 @@ class CarController extends Controller
                 Car::where('id', $id)->update($data);
                 return redirect('admin/cars');
             }
-    
+            public function search(Request $request)
+            {
+                // Retrieve selected car type from the select menu
+                $selectedOption = $request->input('carType');
+            
+                // Query cars based on the selected car type
+                $cars = Car::where('title', $selectedOption)->get();
+            
+                // Return the search results to a view or perform further actions as needed
+                return view('search-results', compact('cars'));
+            }
+            
 
     /**
      * Remove the specified resource from storage.
